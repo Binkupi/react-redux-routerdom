@@ -10,8 +10,7 @@ var initialState={
 const itemEditting=(state=initialState,action)=>{
     switch(action.type){
         case types.GET_ITEM_EDITTING:
-            state=action.product;
-           return state;
+           return Object.assign({},{...state}, action.product);
 
         default:
             return state;

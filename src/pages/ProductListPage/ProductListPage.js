@@ -9,9 +9,6 @@ import* as actions from './../../actions/index'
 class ProductListPage extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            products:[],
-        }
     }
     componentDidMount(){
         this.props.fetchProductsRequest();

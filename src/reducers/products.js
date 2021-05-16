@@ -13,27 +13,29 @@ var findIndex=(products,id)=>{
 }
 const products=(state=initialState,action)=>{
     var index;
+    var replaceState;
     switch(action.type){
         case types.FETCH_PRODUCTS:
-            state=action.products;
-            return [...state];
+            return Object.assign([],[...state], action.products);
         case types.SAVE_PRODUCT:
-            index=findIndex(state,action.product.id);
+            replaceState=[...state];
+            index=findIndex(replaceState,action.product.id);
             var {product}=action;
             if(index!==-1){
-                state[index]=product;
+                replaceState[index]=product;
                 
             }else
             {
-                state.push(product);
+                replaceState.push(product);
             }
-            return [...state];  
+            return replaceState; 
         case types.DELETE_PRODUCT:
-            index=findIndex(state,action.id);
+            replaceState=[...state];
+            index=findIndex(replaceState,action.id);
             if(index!==-1){
-                state.splice(index,1);
+                replaceState.splice(index,1);
             }   
-            return [...state];       
+            return replaceState;       
         default:
             return [...state];
     }
