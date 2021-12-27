@@ -1,3 +1,4 @@
+//chứa các CONSTANT cho action redux
 //render list sản phẩm
 export const FETCH_PRODUCTS="FETCH_PRODUCTS"
 

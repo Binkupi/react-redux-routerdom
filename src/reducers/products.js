@@ -1,5 +1,6 @@
 import * as types from './../constants/ActionTypes'
 
+//1 reducer cơ bảng của redux( thư viện hỗ trợ lưu trữ state của component)
 var initialState=[
 ];
 var findIndex=(products,id)=>{

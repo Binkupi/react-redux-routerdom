@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import * as actions from './../../actions/index'
 import {connect} from 'react-redux'
+
+//Sử dụng classComponent chỉ tham khảo k nên dùng, chuyển sang dùng function component dễ hiểu hơn
 class ProductActionPage extends Component {
     constructor(props) {
       super(props);
@@ -13,7 +15,7 @@ class ProductActionPage extends Component {
         ckbStatus:false,
       }
     }
-
+    //vòng đời của class component, sẽ chạy khi component render xong
     componentDidMount(){
       var {match}=this.props;
       if(match){
@@ -22,7 +24,7 @@ class ProductActionPage extends Component {
 
       }
     }
-
+    //vòng đời component, đã bị khai tử hết hỗ trợ
     UNSAFE_componentWillReceiveProps(nextProps){
       if(nextProps&&nextProps.itemEditting){
         var {itemEditting}=nextProps;
@@ -34,6 +36,8 @@ class ProductActionPage extends Component {
         })
       }
     }
+
+    //handle ô input bằng sự kiện, có thể sử dụng thư viện formik để xử lý form(khuyên học)
     onChange=(e)=>{
       var target=e.target;
       var name=target.name;

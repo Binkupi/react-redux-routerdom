@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 class ProductList extends Component {
   render(){
-      var {children}=this.props;
+      var {children}=this.props;//children=this.props.children
     return (       
         <table className="table">
             <thead>

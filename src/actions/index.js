@@ -1,3 +1,5 @@
+//Chứa các action để dispatch thay đổi các state trong redux
+
 import * as types from './../constants/ActionTypes'
 import callApi from './../utils/apiCaller'
 //Xử lý render sản phẩm

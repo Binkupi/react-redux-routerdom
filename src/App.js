@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import Menu from './components/Menu/Menu'
 import routes from './routes'
 import {Switch,Route,BrowserRouter as Router} from 'react-router-dom'
+
+//Compnent gốc của ứng dụng, tạo router ở đây, tìm hiểu react-router-dom để dùng router(Quan trọng)
 class App extends Component {
     showContentMenu(routes){
         var result=null;

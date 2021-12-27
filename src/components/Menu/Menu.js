@@ -11,6 +11,29 @@ const menus=[
         name:'Quản lý sản phẩm',
         to:'/product-list',
         exact:false,
+    },
+    {
+        name:'Form',
+        to:'/form',
+        exact:false,
+    }
+    ,
+    {
+        name:'Formik',
+        to:'/formik',
+        exact:true,
+    }
+    ,
+    {
+        name:'FormikHook',
+        to:'/formik/hook',
+        exact:true,
+    }
+    ,
+    {
+        name:'RefPage',
+        to:'/ref',
+        exact:true,
     }
 ]
 const MenuLink=({label,to,activeOnlyWhenExact})=>{
